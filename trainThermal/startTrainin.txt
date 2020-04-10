@@ -1,0 +1,1 @@
+./darknet detector train data/thermal.data cfg/yolov3-custom.cfg darknet53.conv.74
