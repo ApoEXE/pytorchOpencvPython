@@ -1,6 +1,8 @@
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
+import time
 # import matplotlib.pyplot as plt
 H = 0
 W = 0
@@ -95,11 +97,33 @@ def convertImg(canny, image):
     return image
 
 # The video feed is read in as a VideoCapture object
-cap = cv.VideoCapture("thermal1.mp4")
+videopath = str(sys.argv[1])
+cap = cv.VideoCapture(videopath)
+string = videopath.split(".")
+newName = string[0]+'.avi'
 scale_percent = 30
+frame_width = int(cap.get(3))
+frame_height = int(cap.get(4))
+#width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH) + 0.5)
+#height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT) + 0.5)
+#size = (width, height)
+#fourcc = cv.VideoWriter_fourcc('M','J','P','G')
+#fourcc = cv.VideoWriter_fourcc(*'XVID')
+#fourcc = cv.VideoWriter_fourcc(*'MJPG')
+print(frame_width,frame_height)
+fourcc = cv.VideoWriter_fourcc(*'DIVX')
+outvideo = cv.VideoWriter(newName,fourcc, 40, (frame_width,frame_height))
+#outvideo = cv.VideoWriter('outpy.avi',fourcc, 10, size)
+totaltime = 0
+frames = 0
+fps = 0
 while (cap.isOpened()):
+    starttime = time.time()
     # ret = a boolean return value from getting the frame, frame = the current frame being projected in the video
     ret, frame = cap.read()
+    if not ret:
+        break
+    frames += 1
     width = int(frame.shape[1] * scale_percent / 100)
     height = int(frame.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -116,15 +140,23 @@ while (cap.isOpened()):
     rgb = cv.cvtColor(canny, cv.COLOR_GRAY2RGB)  
     rgb *= np.array((0,1,0),np.uint8) # set g and b to 0, leaves red :)
     out = np.bitwise_or(resized, rgb) 
+    cv.putText(out,str(fps)+"FPS", (30,30), cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,255),1)
     #out=convertImg(canny,resized)
-    cv.imshow("out",out)
-    
     # plt.imshow(frame)
     # plt.show()
     segment = do_segment(canny)
     #cv.imshow("segment",segment)
     hough = cv.HoughLinesP(segment, 2, np.pi / 180, 100, np.array([]), minLineLength = 100, maxLineGap = 50)
     lineThickness = 2
+    #print(type(out))
+    width = int(frame.shape[1])
+    height = int(frame.shape[0])
+    dim = (width, height)
+    resized = cv.resize(out, dim, interpolation = cv.INTER_AREA)
+
+    out = cv.cvtColor(resized,cv.COLOR_RGB2BGR)
+    cv.imshow("out",out)
+    outvideo.write(out)
     #if hough is not None:
         #print("size",len(hough),"hough",hough)
         #x1, y1, x2, y2 = hough[0].reshape(4)
@@ -144,8 +176,15 @@ while (cap.isOpened()):
     # Opens a new window and displays the output frame
     #cv.imshow("output", output)
     # Frames are read by intervals of 10 milliseconds. The programs breaks out of the while loop when the user presses the 'q' key
-    if cv.waitKey(10) & 0xFF == ord('q'):
-        break
+    cv.waitKey(1)
+    totaltime += time.time()-starttime
+    if(totaltime >= 1):
+        print(frames, "FPS")
+        fps = frames
+        starttime = 0
+        totaltime = 0
+        frames = 0
 # The following frees up resources and closes all windows
 cap.release()
+outvideo.release()
 cv.destroyAllWindows()
