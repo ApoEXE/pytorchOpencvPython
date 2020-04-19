@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 def plotting(x_var,y_var,predit_var):
-    plt.plot(x_var,y_var,'bo',x_var,predit_var,'g^')
+    plt.plot(x_var,y_var,'bo',x_var,predit_var,'r^')
     plt.show()
 
 def test(optimizer,model,inputs,target):
@@ -26,20 +26,23 @@ def test(optimizer,model,inputs,target):
         error=abs(array_t[0]-array_o[0])
         error = np.mean(error)
         print("model Error",error)
+        print(array_t[0])
+        print(array_o[0].astype(int))
         plotting(array_in[0],array_t[0],array_o[0])
 
 
 
+muestra = 5
 #USING Y=X^2
-x_t = np.random.randint(low=1, high=60, size=11)
+x_t = np.random.randint(low=1, high=60, size=muestra)
 data_size = len(x_t)
 y_t = np.array([[x**2 for x in x_t]])
 x_t = torch.tensor([x_t]).float()
 y_t = torch.from_numpy(y_t).float()
 x_t = x_t.view([1, 1, data_size])
 y_t = y_t.view([1, 1, data_size])
-print(x_t)
-print(y_t)
+#print(x_t)
+#print(y_t)
 
 print("data_size",data_size)
 net = Net(data_size)
