@@ -20,6 +20,8 @@
 #else
 #include <unistd.h>
 #endif
+std::string absPath_weights = "/home/jav/wsl/weights/";
+std::string absPath_img = "/home/jav/wsl/images_videos/";
 bool FileExists(const std::string &Filename)
 {
     bool check = access(Filename.c_str(), 0) == 0;
@@ -41,26 +43,26 @@ const auto num_colors = sizeof(colors) / sizeof(colors[0]);
 int main()
 {
     bool _default = true;
-    std::string classes = "default/coco.names";
-    std::string weights = "default/yolov3.weights";
-    std::string conf = "default/yolov3.cfg";
-    //std::string videoPath = "../vid_img/busystreet.mp4";
-    //std::string videoPath = "../vid_img/thermalDriving.mp4";
-    std::string videoPath = "../vid_img/prueba.mp4";
+    std::string classes = absPath_weights+"default/coco.names";
+    std::string weights = absPath_weights+"default/yolov3.weights";
+    std::string conf = absPath_weights+"default/yolov3.cfg";
+    //std::string videoPath = absPath_img+"busystreet.mp4";
+    //std::string videoPath = absPath_img+"thermalDriving.mp4";
+    std::string videoPath = absPath_img+"prueba.mp4";
     if (_default)
     {
-        classes = "default/coco.names";
-        weights = "default/yolov3.weights";
-        conf = "default/yolov3.cfg";
+        classes = absPath_weights+"default/coco.names";
+        weights = absPath_weights+"default/yolov3.weights";
+        conf = absPath_weights+"default/yolov3.cfg";
     }
     else
     {
-        conf = "custom/yolov3-obj.cfg";
+        conf = absPath_weights+"custom/yolov3-obj.cfg";
 
-        weights = "custom//yolov3-obj_last.weights";
+        weights = absPath_weights+"custom//yolov3-obj_last.weights";
         //weights = "custom/thermal8.weights";
 
-        classes = "custom/obj.names";
+        classes = absPath_weights+"custom/obj.names";
     }
 
     cv::cuda::GpuMat frameCuda;
