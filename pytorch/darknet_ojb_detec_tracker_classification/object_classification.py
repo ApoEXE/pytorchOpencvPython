@@ -11,25 +11,38 @@ from torch.autograd import Variable
 import cv2
 import sys
 #-------------------------------config neural network 
-config_path='config/yolov3.cfg'
-weights_path='config/yolov3.weights'
-class_path='config/coco.names'
+
+
+
+if torch.cuda.is_available():  
+  dev = "cuda:0" 
+else:  
+  dev = "cpu"  
+device = torch.device(dev)
+
+#weights_path='thermal8.weights'
+weights_path='video8.weights'
+class_path='obj.names'
+config_path='thermal_yolov3.cfg'
+#config_path='config/yolov3.cfg'
+#weights_path='config/yolov3.weights'
+#class_path='config/coco.names'
 img_size=416
 conf_thres=0.8
 nms_thres=0.4
 # Load model and weights
 model = Darknet(config_path, img_size=img_size)
 model.load_weights(weights_path)
-#model.cuda()
-model.eval()
+model.cuda()
+
 classes = utils.load_classes(class_path)
-#Tensor = torch.cuda.FloatTensor
-Tensor = torch.FloatTensor
+Tensor = torch.cuda.FloatTensor
+
 #--------------------------------
 def detect_image(img):
     # run inference on the model and get detections
     with torch.no_grad():
-        detections = model(img)
+        detections = model(img.to(device))
         detections = utils.non_max_suppression(detections, 80, conf_thres, nms_thres)
     return detections[0]
 
@@ -53,15 +66,16 @@ def opencvToPytorch(img):
 
 def preprocessCV(img):
     #resize
-    #print("W",img.shape[1],"H",img.shape[0])
+    print("W",img.shape[1],"H",img.shape[0])
     ratio = min(img_size/img.shape[1], img_size/img.shape[0])
     #print("ratio",ratio,"img_size/W",img_size/img.shape[1],"img_size/H",img_size/img.shape[0])
     imw = round(img.shape[1] * ratio)
     imh = round(img.shape[0] * ratio)
-    #print("newW",imw,"newH",imh)
+    print("newW",imw,"newH",imh)
     dim = (imw, imh)
     img = cv2.resize(img, dim)
-
+    print("W2",img.shape[1],"H2",img.shape[0])
+    cv2.imshow("resized",img)
     #padding
     top = 0
     bottom = 0
@@ -72,7 +86,7 @@ def preprocessCV(img):
         pad_size = int(size)
         top = pad_size
         bottom = pad_size
-        #print("top",top,"bottom",bottom)
+        print("top",top,"bottom",bottom)
     else :
         size = (imh-imw)/2
         pad_size = int(size)
@@ -82,6 +96,7 @@ def preprocessCV(img):
     color = (128,128,128)
     data = cv2.copyMakeBorder( img, top, bottom,left,right, cv2.BORDER_CONSTANT,value=color)
     #print("nW",data.shape[1],"nH",data.shape[0])
+    cv2.imshow("padded", data)
 
     return data
 
@@ -102,12 +117,13 @@ def drawDetecBox(img,detections):
     
     if detections is not None:
         unique_labels = detections[:, -1].cpu().unique()
-        print("found",len(unique_labels))
+        print("Classes found",len(unique_labels),"detections found",len(detections))
         # browse detections and draw bounding boxes
-        print("detections found",len(detections))
+        print()
         for x1, y1, x2, y2, conf, cls_conf, cls_pred in detections:
 
             #padSize added to the resized image Top and bottom left and right
+            '''
             padSizeY = pad_y // 2
             padSizeX = pad_x // 2
 
@@ -132,8 +148,11 @@ def drawDetecBox(img,detections):
             x1 =  ratioX1 * realWidth
             y2 =  ratioY2 * realHeight
             x2 =  ratioX2 * realWidth
+            '''
             cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),thickness=2)
             cv2.putText(img,classes[int(cls_pred)], (x1,y1), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255),2)
+    else:
+        print("didnt find detecctions")       
     return img
 
 def displayScaled(img,scale):
@@ -154,13 +173,16 @@ if __name__ == '__main__':
     #img_path = "images/Intersection-Counts.jpg"
     prev_time = time.time()
     image = cv2.imread(img_path)
+    #cv2.imshow("original",image)
     resizedPadded = preprocessCV(image)
     tensorImg = opencvToPytorch(resizedPadded)
     detections = detect_image(tensorImg)
     inference_time = datetime.timedelta(seconds=time.time() - prev_time)
     print ('Inference Time: %s' % (inference_time))
-    imgDetected = drawDetecBox(image,detections)
-    scale = 0.3
-    imgDetected= displayScaled(imgDetected,scale)
-    cv2.imshow("imagen",imgDetected)
-    cv2.waitKey()
+    imgDetected = drawDetecBox(resizedPadded,detections)
+    cv2.imshow("img_with_detec", imgDetected)
+    #scale = 0.3
+    #imgDetected= displayScaled(imgDetected,scale)
+    #cv2.imshow("imagen",imgDetected)
+    while(1):
+        k = cv2.waitKey(33)

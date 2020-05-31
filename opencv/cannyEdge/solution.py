@@ -140,7 +140,7 @@ while (cap.isOpened()):
     rgb = cv.cvtColor(canny, cv.COLOR_GRAY2RGB)  
     rgb *= np.array((0,1,0),np.uint8) # set g and b to 0, leaves red :)
     out = np.bitwise_or(resized, rgb) 
-    cv.putText(out,str(fps)+"FPS", (30,30), cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,255),1)
+    #cv.putText(out,str(fps)+"FPS", (30,30), cv.FONT_HERSHEY_SIMPLEX, 1, (0,0,255),1)
     #out=convertImg(canny,resized)
     # plt.imshow(frame)
     # plt.show()
@@ -176,7 +176,7 @@ while (cap.isOpened()):
     # Opens a new window and displays the output frame
     #cv.imshow("output", output)
     # Frames are read by intervals of 10 milliseconds. The programs breaks out of the while loop when the user presses the 'q' key
-    cv.waitKey(1)
+    cv.waitKey(10)
     totaltime += time.time()-starttime
     if(totaltime >= 1):
         print(frames, "FPS")
