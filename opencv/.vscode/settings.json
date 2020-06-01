@@ -56,7 +56,8 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "future": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/cpp/opencv_dnn_cuda_yolov3"
 }
