@@ -231,14 +231,21 @@ int main(int argc, char *argv[])
 
     //VIDEO CAPTURE
     cv::VideoCapture source;
-    if (argc >= 2)
+    int input = std::stoi(argv[1]);
+    if (argc >= 2 && input==2)
     {
-        printf("Thermal");
+        printf("Thermal ");
         source.open(2,cv::CAP_V4L);
     }
-    else
+    if (argc >= 2 && input==0)
     {
+        printf("webcam ");
         source.open(0,cv::CAP_V4L);
+    }
+    if (argc >= 3 && input==1)
+    {
+        printf("video Path ");
+        source.open(argv[2],cv::CAP_FFMPEG);
     }
     
 
