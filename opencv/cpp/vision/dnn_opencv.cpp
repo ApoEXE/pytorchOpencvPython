@@ -10,8 +10,11 @@ dnn_opencv::dnn_opencv(/* args */)
 dnn_opencv::~dnn_opencv()
 {
 }
-void dnn_opencv::load_model(std::string conf, std::string weights, std::string classes)
+void dnn_opencv::load_model(std::string lconf, std::string lweights, std::string lclasses)
 {
+    conf = lconf;
+    weights = lweights;
+    classes = lclasses;
     net = cv::dnn::DetectionModel(conf, weights);
     //net = cv::dnn::readNet(conf, weights);
     net.setPreferableBackend(cv::dnn::DNN_BACKEND_CUDA);

@@ -1,6 +1,18 @@
 #ifndef DNN_OPENCV_H
 #define DNN_OPENCV_H
-#include "include.h"
+#include <queue>
+#include <iterator>
+#include <sstream>
+#include <fstream>
+#include <iomanip>
+#include <chrono>
+#include <string>
+#include <opencv2/core.hpp>
+#include <opencv2/dnn.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/core/cuda.hpp>
+#include <opencv2/opencv.hpp>
 
 class dnn_opencv
 {
@@ -10,6 +22,14 @@ private:
     const float confidence_threshold = 0.5;
     const float nms_threshold = 0.4;
     const int num_classes = 3;
+
+    std::string model = "yolov3";
+
+    std::string classes;
+    std::string weights;
+    std::string conf;
+
+
     // colors for bounding boxes
     const cv::Scalar colors[4] = {
         {0, 255, 255},
