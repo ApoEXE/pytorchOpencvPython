@@ -16,7 +16,9 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/core/cuda.hpp>
 #include <opencv2/opencv.hpp>
-
+#include <opencv2/cudaimgproc.hpp>
+#include <opencv2/cudawarping.hpp>
+#include <opencv2/cudaarithm.hpp>
 #include <fstream>
 
 #define top 119        //w
@@ -39,7 +41,7 @@ private:
     int cap_width;
     cv::Mat black;
     cv::Mat black_or;
-
+    cv::Mat noInclude1;//mask to not include black portion
 
     cv::cuda::GpuMat resizeGpu;      //SAVE RESIZE FRAME BUT GPU
     cv::cuda::GpuMat blackGpu;       //SAVE RESIZE FRAME BUT GPU
@@ -49,7 +51,15 @@ private:
     cv::cuda::GpuMat gray_gpu;       //SAVE GRAYSCALE FRAME BUT GPU
 
 
+    std::vector<cv::Point> pts;
+    cv::Mat mask_1ch;//here mask from vector is save, first mask
+    cv::cuda::GpuMat mask1_gpu;       //mask to bitwise out of canny
+
+    cv::Mat mask_lineCirPolly;//here where mask for circle line and poly customization takes place
+
     std::vector<std::string> split(const std::string& str, const std::string& delim);
+    bool FileExists(const std::string &Filename);
+    void setPts(std::string file);
 
 public:
     uint16_t new_x,new_y;
@@ -65,13 +75,16 @@ public:
     void setValues(int cap_height, int cap_width, int black_w, int black_h);
     void saveConfig();
     void uploadConfig();
-    /*
-    static void* getKey_wrapper(void* object){
-        reinterpret_cast<projection*>(object)->getKey();
-        return 0;
-    }
-    void getKey();
-    */
+    void saveMaskPts(std::vector<cv::Point> vpts);
+    cv::Mat returnMask(std::vector<cv::Point> vpts, cv::Size size);
+    cv::Mat returnTransparency(float alfa, cv::Mat src, cv::Mat mask);
+    cv::Mat applyPolyMask(cv::Mat input);
+    void setMask(cv::Mat);
+    cv::Size getLastSize();//get the values of the final image size to be process
+    void updatePts();
+    cv::Mat Border(cv::Mat frame);
+
+
 };
 
 #endif

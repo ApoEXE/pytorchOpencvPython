@@ -29,6 +29,17 @@ private:
     std::string weights;
     std::string conf;
 
+    // detection
+    cv::Mat blob;
+    std::vector<cv::Mat> detections;
+    std::vector<cv::Rect> boxes;
+    std::vector<int> class_id;
+    std::vector<float> scores;
+    std::vector<cv::String> output_names;
+    std::vector<std::string> class_names;
+    float inference_fps;
+    std::chrono::_V2::steady_clock::time_point total_start;
+    std::vector<int> indices;
 
     // colors for bounding boxes
     const cv::Scalar colors[4] = {
@@ -38,11 +49,20 @@ private:
         {255, 0, 0}};
     const int num_colors = sizeof(colors) / sizeof(colors[0]);
 
+    //FPS
+    std::__cxx11::string stats;
+
+private:
+    
+
 public:
     dnn_opencv(/* args */);
     ~dnn_opencv();
     void load_model(std::string conf, std::string weights, std::string classes);
     cv::Mat inference(cv::Mat frame);
+    cv::Mat drawDetection(cv::Mat frame);
+    cv::Mat drawFPS(cv::Mat frame);
+    void getDetections(cv::Mat frame);
 };
 
 #endif
