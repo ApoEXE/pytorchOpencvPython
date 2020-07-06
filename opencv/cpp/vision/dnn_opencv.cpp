@@ -38,7 +38,10 @@ cv::Mat dnn_opencv::inference(cv::Mat frame)
     total_start = std::chrono::steady_clock::now();
 
     cv::dnn::blobFromImage(frame, blob, 0.00392, cv::Size(416, 416), cv::Scalar(), true, false, CV_32F);
-    net.setInput(blob);
+    if (!blob.empty())
+    {
+        net.setInput(blob);
+    }
 
     auto dnn_start = std::chrono::steady_clock::now();
     net.forward(detections, output_names);

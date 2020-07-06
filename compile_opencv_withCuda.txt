@@ -1,4 +1,15 @@
+
+
 IS INSTALLED /usr/local/include/opencv4/
+
+sudo apt-get install build-essential
+
+sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+
+sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+
+sudo apt-get install libxvidcore-dev libx264-dev
+//opencv 4.3
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
             -D CMAKE_INSTALL_PREFIX=/usr/local \
             -D INSTALL_C_EXAMPLES=ON \
@@ -24,18 +35,27 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
             -D WITH_IPP=ON \
             -D WITH_CSTRIPES=ON \
             -D WITH_OPENCL=ON \
+	    -D WITH_VTK=ON \
+	    -D FORCE_VTK=ON \
+	    -D VTK_DIR=/usr/local/include/vtk-8.2/ \
             -D CUDA_NVCC_FLAGS="-D_FORCE_INLINES" \
             -D CMAKE_CXX_FLAGS=-isystem\ /opt/nvidia-video-codec/include \
             -D BUILD_EXAMPLES=ON ..
-$ nproc
-$ make -j8
-$ sudo make install
+nproc
+make -j8
+sudo make install
 Include the libs in your environment
 
-$ sudo /bin/bash -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
-$ sudo ldconfig
+sudo /bin/bash -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
 
 
+unzip Video_Codec_SDK.zip
+cd Video_Codec_SDK
+
+cp include/* /usr/local/cuda/include
+cp Lib/linux/stubs/x86_64/* /usr/local/cuda/lib64/stubs
+http://lifestyletransfer.com/how-to-install-nvidia-gstreamer-plugins-nvenc-nvdec-on-ubuntu/
 
 nvidia headers ffm
 git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
@@ -54,3 +74,25 @@ ffmpeg
 
 correct way to compile
 g++ test.cpp -o test `pkg-config opencv --cflags --libs` 
+
+
+install vtk 8.2 release
+https://vtk.org/download/
+sudo apt install cmake libavcodec-dev libavformat-dev libavutil-dev libboost-dev libdouble-conversion-dev libeigen3-dev libexpat1-dev libfontconfig-dev libfreetype6-dev libgdal-dev libglew-dev libhdf5-dev libjpeg-dev libjsoncpp-dev liblz4-dev liblzma-dev libnetcdf-dev libnetcdf-cxx-legacy-dev libogg-dev libpng-dev libpython3-dev libqt5opengl5-dev libqt5x11extras5-dev libsqlite3-dev libswscale-dev libtheora-dev libtiff-dev libxml2-dev libxt-dev qtbase5-dev qttools5-dev zlib1g-dev
+git clone git@gitlab.kitware.com:vtk/vtk.git
+cd vtk
+git checkout v8.2.0
+mkdir build
+cd build
+cmake -D CMAKE_INSTALL_PREFIX=/usr/local -D CMAKE_BUILD_TYPE=Release -D VTK_QT_VERSION=5 -D VTK_Group_Qt=ON -D BUILD_SHARED_LIBS=ON ..
+make -j$(($(nproc) - 1))
+make install
+
+/usr/local/include/vtk-8.2/
+/usr/local/lib/cmake/vtk-8.2/
+/usr/local/bin/vtk
+
+
+
+
+sudo patch --verbose --dry-run --ignore-whitespace --fuzz 3 -p 1 < fix_dtb_lost.patch

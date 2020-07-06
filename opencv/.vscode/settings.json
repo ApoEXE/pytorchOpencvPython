@@ -57,7 +57,8 @@
         "thread": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "future": "cpp"
+        "future": "cpp",
+        "bitset": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/cpp/opencv_dnn_cuda_yolov3"
 }

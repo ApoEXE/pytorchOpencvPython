@@ -1,4 +1,4 @@
-The system is: Linux - 5.3.0-53-generic - x86_64
+The system is: Linux - 5.3.0-62-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/gcc-7 
 Build flags: 
@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/jav/wsl/pytorchOpencvPyt
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4c0d8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4c0d8.dir/build.make CMakeFiles/cmTC_4c0d8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b7ff5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7ff5.dir/build.make CMakeFiles/cmTC_b7ff5.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4c0d8.dir/testCCompiler.c.o
-/usr/bin/gcc-7    -o CMakeFiles/cmTC_4c0d8.dir/testCCompiler.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_4c0d8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c0d8.dir/link.txt --verbose=1
-/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_4c0d8.dir/testCCompiler.c.o  -o cmTC_4c0d8 
+Building C object CMakeFiles/cmTC_b7ff5.dir/testCCompiler.c.o
+/usr/bin/gcc-7    -o CMakeFiles/cmTC_b7ff5.dir/testCCompiler.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b7ff5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7ff5.dir/link.txt --verbose=1
+/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_b7ff5.dir/testCCompiler.c.o  -o cmTC_b7ff5 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_92f1c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_92f1c.dir/build.make CMakeFiles/cmTC_92f1c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e692c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e692c.dir/build.make CMakeFiles/cmTC_e692c.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o
-/usr/bin/gcc-7    -o CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_92f1c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92f1c.dir/link.txt --verbose=1
-/usr/bin/gcc-7     -v -rdynamic CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o  -o cmTC_92f1c 
+Building C object CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o
+/usr/bin/gcc-7    -o CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_e692c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e692c.dir/link.txt --verbose=1
+/usr/bin/gcc-7     -v -rdynamic CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o  -o cmTC_e692c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/gcc-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_92f1c' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1ty6aG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_92f1c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_92f1c' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e692c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGMbTO3.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e692c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e692c' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_92f1c/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_92f1c.dir/build.make CMakeFiles/cmTC_92f1c.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e692c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e692c.dir/build.make CMakeFiles/cmTC_e692c.dir/build]
   ignore line: [make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/gcc-7    -o CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_92f1c]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92f1c.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/gcc-7     -v -rdynamic CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o  -o cmTC_92f1c ]
+  ignore line: [Building C object CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/gcc-7    -o CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_e692c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e692c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/gcc-7     -v -rdynamic CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o  -o cmTC_e692c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/gcc-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_92f1c' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1ty6aG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_92f1c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_e692c' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGMbTO3.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e692c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc1ty6aG.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccGMbTO3.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_92f1c] ==> ignore
+    arg [cmTC_e692c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_92f1c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_e692c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -159,14 +159,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1bef8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1bef8.dir/build.make CMakeFiles/cmTC_1bef8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_11c84/fast"
+/usr/bin/make -f CMakeFiles/cmTC_11c84.dir/build.make CMakeFiles/cmTC_11c84.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1bef8.dir/feature_tests.c.o
-/usr/bin/gcc-7   -std=c11 -o CMakeFiles/cmTC_1bef8.dir/feature_tests.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1bef8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bef8.dir/link.txt --verbose=1
-/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_1bef8.dir/feature_tests.c.o  -o cmTC_1bef8 
+Building C object CMakeFiles/cmTC_11c84.dir/feature_tests.c.o
+/usr/bin/gcc-7   -std=c11 -o CMakeFiles/cmTC_11c84.dir/feature_tests.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_11c84
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11c84.dir/link.txt --verbose=1
+/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_11c84.dir/feature_tests.c.o  -o cmTC_11c84 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -179,14 +179,14 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_09cc9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_09cc9.dir/build.make CMakeFiles/cmTC_09cc9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_01714/fast"
+/usr/bin/make -f CMakeFiles/cmTC_01714.dir/build.make CMakeFiles/cmTC_01714.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_09cc9.dir/feature_tests.c.o
-/usr/bin/gcc-7   -std=c99 -o CMakeFiles/cmTC_09cc9.dir/feature_tests.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_09cc9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09cc9.dir/link.txt --verbose=1
-/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_09cc9.dir/feature_tests.c.o  -o cmTC_09cc9 
+Building C object CMakeFiles/cmTC_01714.dir/feature_tests.c.o
+/usr/bin/gcc-7   -std=c99 -o CMakeFiles/cmTC_01714.dir/feature_tests.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_01714
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01714.dir/link.txt --verbose=1
+/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_01714.dir/feature_tests.c.o  -o cmTC_01714 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -199,14 +199,14 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_252c6/fast"
-/usr/bin/make -f CMakeFiles/cmTC_252c6.dir/build.make CMakeFiles/cmTC_252c6.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bca1d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bca1d.dir/build.make CMakeFiles/cmTC_bca1d.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_252c6.dir/feature_tests.c.o
-/usr/bin/gcc-7   -std=c90 -o CMakeFiles/cmTC_252c6.dir/feature_tests.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_252c6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_252c6.dir/link.txt --verbose=1
-/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_252c6.dir/feature_tests.c.o  -o cmTC_252c6 
+Building C object CMakeFiles/cmTC_bca1d.dir/feature_tests.c.o
+/usr/bin/gcc-7   -std=c90 -o CMakeFiles/cmTC_bca1d.dir/feature_tests.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_bca1d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bca1d.dir/link.txt --verbose=1
+/usr/bin/gcc-7      -rdynamic CMakeFiles/cmTC_bca1d.dir/feature_tests.c.o  -o cmTC_bca1d 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -217,28 +217,28 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_35345/fast"
-/usr/bin/make -f CMakeFiles/cmTC_35345.dir/build.make CMakeFiles/cmTC_35345.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f5e4a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f5e4a.dir/build.make CMakeFiles/cmTC_f5e4a.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_35345.dir/testCXXCompiler.cxx.o
-/usr/bin/g++-7     -o CMakeFiles/cmTC_35345.dir/testCXXCompiler.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_35345
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35345.dir/link.txt --verbose=1
-/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_35345.dir/testCXXCompiler.cxx.o  -o cmTC_35345 
+Building CXX object CMakeFiles/cmTC_f5e4a.dir/testCXXCompiler.cxx.o
+/usr/bin/g++-7     -o CMakeFiles/cmTC_f5e4a.dir/testCXXCompiler.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_f5e4a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5e4a.dir/link.txt --verbose=1
+/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_f5e4a.dir/testCXXCompiler.cxx.o  -o cmTC_f5e4a 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2126d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2126d.dir/build.make CMakeFiles/cmTC_2126d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_335bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_335bc.dir/build.make CMakeFiles/cmTC_335bc.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/g++-7     -o CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_2126d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2126d.dir/link.txt --verbose=1
-/usr/bin/g++-7      -v -rdynamic CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2126d 
+Building CXX object CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/g++-7     -o CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_335bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_335bc.dir/link.txt --verbose=1
+/usr/bin/g++-7      -v -rdynamic CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_335bc 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/g++-7
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,9 +250,9 @@ Thread model: posix
 gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2126d' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfUMyq0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2126d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2126d' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_335bc' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0Q5JNr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_335bc /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_335bc' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -260,14 +260,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_2126d/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_2126d.dir/build.make CMakeFiles/cmTC_2126d.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_335bc/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_335bc.dir/build.make CMakeFiles/cmTC_335bc.dir/build]
   ignore line: [make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/g++-7     -o CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_2126d]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2126d.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/g++-7      -v -rdynamic CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2126d ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/g++-7     -o CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_335bc]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_335bc.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/g++-7      -v -rdynamic CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_335bc ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/g++-7]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.5.0 (Ubuntu 7.5.0-3ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2126d' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccfUMyq0.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2126d /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_335bc' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0Q5JNr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_335bc /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccfUMyq0.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc0Q5JNr.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2126d] ==> ignore
+    arg [cmTC_335bc] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_2126d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_335bc.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -344,14 +344,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b307c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b307c.dir/build.make CMakeFiles/cmTC_b307c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d32cd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d32cd.dir/build.make CMakeFiles/cmTC_d32cd.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b307c.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++1z -o CMakeFiles/cmTC_b307c.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b307c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b307c.dir/link.txt --verbose=1
-/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_b307c.dir/feature_tests.cxx.o  -o cmTC_b307c 
+Building CXX object CMakeFiles/cmTC_d32cd.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++1z -o CMakeFiles/cmTC_d32cd.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d32cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d32cd.dir/link.txt --verbose=1
+/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_d32cd.dir/feature_tests.cxx.o  -o cmTC_d32cd 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -417,14 +417,14 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a3f04/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a3f04.dir/build.make CMakeFiles/cmTC_a3f04.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f3585/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f3585.dir/build.make CMakeFiles/cmTC_f3585.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a3f04.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++14 -o CMakeFiles/cmTC_a3f04.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a3f04
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3f04.dir/link.txt --verbose=1
-/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_a3f04.dir/feature_tests.cxx.o  -o cmTC_a3f04 
+Building CXX object CMakeFiles/cmTC_f3585.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++14 -o CMakeFiles/cmTC_f3585.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f3585
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3585.dir/link.txt --verbose=1
+/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_f3585.dir/feature_tests.cxx.o  -o cmTC_f3585 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -490,14 +490,14 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f6b92/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f6b92.dir/build.make CMakeFiles/cmTC_f6b92.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_08d87/fast"
+/usr/bin/make -f CMakeFiles/cmTC_08d87.dir/build.make CMakeFiles/cmTC_08d87.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f6b92.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++11 -o CMakeFiles/cmTC_f6b92.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f6b92
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6b92.dir/link.txt --verbose=1
-/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_f6b92.dir/feature_tests.cxx.o  -o cmTC_f6b92 
+Building CXX object CMakeFiles/cmTC_08d87.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++11 -o CMakeFiles/cmTC_08d87.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_08d87
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08d87.dir/link.txt --verbose=1
+/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_08d87.dir/feature_tests.cxx.o  -o cmTC_08d87 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -563,14 +563,14 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8991d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8991d.dir/build.make CMakeFiles/cmTC_8991d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1e6e0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1e6e0.dir/build.make CMakeFiles/cmTC_1e6e0.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8991d.dir/feature_tests.cxx.o
-/usr/bin/g++-7    -std=c++98 -o CMakeFiles/cmTC_8991d.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8991d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8991d.dir/link.txt --verbose=1
-/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_8991d.dir/feature_tests.cxx.o  -o cmTC_8991d 
+Building CXX object CMakeFiles/cmTC_1e6e0.dir/feature_tests.cxx.o
+/usr/bin/g++-7    -std=c++98 -o CMakeFiles/cmTC_1e6e0.dir/feature_tests.cxx.o -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1e6e0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e6e0.dir/link.txt --verbose=1
+/usr/bin/g++-7       -rdynamic CMakeFiles/cmTC_1e6e0.dir/feature_tests.cxx.o  -o cmTC_1e6e0 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
@@ -634,28 +634,28 @@ make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMake
 Determining if the include file pthread.h exists passed with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8babe/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8babe.dir/build.make CMakeFiles/cmTC_8babe.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_40a91/fast"
+/usr/bin/make -f CMakeFiles/cmTC_40a91.dir/build.make CMakeFiles/cmTC_40a91.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8babe.dir/CheckIncludeFile.c.o
-/usr/bin/gcc-7   -fPIC    -o CMakeFiles/cmTC_8babe.dir/CheckIncludeFile.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_8babe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8babe.dir/link.txt --verbose=1
-/usr/bin/gcc-7 -fPIC     -rdynamic CMakeFiles/cmTC_8babe.dir/CheckIncludeFile.c.o  -o cmTC_8babe 
+Building C object CMakeFiles/cmTC_40a91.dir/CheckIncludeFile.c.o
+/usr/bin/gcc-7   -fPIC    -o CMakeFiles/cmTC_40a91.dir/CheckIncludeFile.c.o   -c /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_40a91
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40a91.dir/link.txt --verbose=1
+/usr/bin/gcc-7 -fPIC     -rdynamic CMakeFiles/cmTC_40a91.dir/CheckIncludeFile.c.o  -o cmTC_40a91 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7188f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7188f.dir/build.make CMakeFiles/cmTC_7188f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d5fc7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5fc7.dir/build.make CMakeFiles/cmTC_d5fc7.dir/build
 make[1]: Entering directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7188f.dir/CheckFunctionExists.c.o
-/usr/bin/gcc-7   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_7188f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_7188f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7188f.dir/link.txt --verbose=1
-/usr/bin/gcc-7 -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_7188f.dir/CheckFunctionExists.c.o  -o cmTC_7188f -lpthread 
+Building C object CMakeFiles/cmTC_d5fc7.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-7   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d5fc7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d5fc7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5fc7.dir/link.txt --verbose=1
+/usr/bin/gcc-7 -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d5fc7.dir/CheckFunctionExists.c.o  -o cmTC_d5fc7 -lpthread 
 make[1]: Leaving directory '/home/jav/wsl/pytorchOpencvPython/opencv/build/CMakeFiles/CMakeTmp'
 
 

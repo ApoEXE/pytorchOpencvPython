@@ -14,6 +14,9 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/core/cuda.hpp>
 #include <opencv2/opencv.hpp>
+#include <opencv2/cudaimgproc.hpp>
+#include <opencv2/cudawarping.hpp>
+#include <opencv2/cudaarithm.hpp>
 
 #ifdef _WIN32
 #include <io.h>
@@ -51,7 +54,7 @@ std::string absPath_weights = "/home/jav/wsl/weights/";
 std::string absPath_img = "/home/jav/wsl/images_videos/";
 constexpr float confidence_threshold = 0.5;
 constexpr float nms_threshold = 0.4;
-constexpr int num_classes = 80;
+constexpr int num_classes = 3;
 
 // colors for bounding boxes
 const cv::Scalar colors[] = {
@@ -169,7 +172,7 @@ int main(int argc, char *argv[])
     std::string conf = absPath_weights + "default/yolov3.cfg";
     //std::string videoPath = absPath_img+"busystreet.mp4";
     //std::string videoPath = absPath_img+"thermalDriving.mp4";
-    std::string videoPath = absPath_img + "prueba.mp4";
+    std::string videoPath = absPath_img + "video1.mp4";
     std::string lookPath = absPath_img + "blackest.jpg";
     cv::Mat black = cv::imread(lookPath);
     cv::Mat black_or = cv::imread(lookPath);
@@ -185,6 +188,7 @@ int main(int argc, char *argv[])
     //Thread
     uint8_t id = 1;
     int rc = 0;
+    
     pthread_t t;
     rc = pthread_create(&t, NULL, getKey, (void *)id);
     if (rc)
@@ -192,6 +196,7 @@ int main(int argc, char *argv[])
         std::cout << "Error:unable to create thread," << rc << std::endl;
         exit(-1);
     }
+    
     if (_default)
     {
         classes = absPath_weights + "default/coco.names";
@@ -206,6 +211,7 @@ int main(int argc, char *argv[])
         //weights = "custom/thermal8.weights";
 
         classes = absPath_weights + "custom/obj.names";
+        std::cout<< "weights " << weights << " conf " << conf << " video path " << videoPath << " classes "<< classes<< "\n";
     }
 
     cv::cuda::GpuMat frameCuda;
@@ -228,6 +234,7 @@ int main(int argc, char *argv[])
         std::cerr << "check which one is missing: " << weights << " " << conf << " " << videoPath << "\n";
         return 0;
     }
+    
 
     //VIDEO CAPTURE
     cv::VideoCapture source;
