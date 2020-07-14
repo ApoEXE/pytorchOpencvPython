@@ -35,6 +35,8 @@ else:
 
 #Load the Caffe model 
 net = cv2.dnn.readNetFromCaffe(args.prototxt, args.weights)
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 
 while True:
     # Capture frame-by-frame
@@ -52,7 +54,9 @@ while True:
     net.setInput(blob)
     #Prediction of network
     detections = net.forward()
-
+    print("-------------------------------------")
+    print(len(detections))
+    print("-------------------------------------")
     #Size of frame resize (300x300)
     cols = frame_resized.shape[1] 
     rows = frame_resized.shape[0]
