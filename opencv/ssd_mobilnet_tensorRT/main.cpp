@@ -4,7 +4,7 @@
 #include <opencv2/imgcodecs.hpp>
 extern const std::string gSampleName;
 cv::Size original;
-std::string weightsPath = "/home/jav/wsl/weights/ssd/";
+std::string weightsPath = "/home/tx2/wsl/weights/ssd/";
 
 std::string get_tegra_pipeline(int width, int height, int fps)
 {
