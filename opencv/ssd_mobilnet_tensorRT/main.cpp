@@ -5,6 +5,14 @@
 extern const std::string gSampleName;
 cv::Size original;
 std::string weightsPath = "/home/jav/wsl/weights/ssd/";
+
+std::string get_tegra_pipeline(int width, int height, int fps)
+{
+    return "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)" + std::to_string(width) + ", height=(int)" +
+           std::to_string(height) + ", format=(string)NV12, framerate=(fraction)" + std::to_string(fps) +
+           "/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink";
+}
+
 int main(int argc, char const *argv[])
 {
 
@@ -17,8 +25,8 @@ int main(int argc, char const *argv[])
     params.dataDirs.push_back("");
     params.dataDirs.push_back("");
     params.dataDirs.push_back("");
-    params.prototxtFileName = weightsPath+"ssd.prototxt";
-    params.weightsFileName = weightsPath+"VGG_VOC0712_SSD_300x300_iter_120000.caffemodel";
+    params.prototxtFileName = weightsPath + "ssd.prototxt";
+    params.weightsFileName = weightsPath + "VGG_VOC0712_SSD_300x300_iter_120000.caffemodel";
     params.inputTensorNames.push_back("data");
     params.batchSize = 1;
     params.outputTensorNames.push_back("detection_out");
@@ -49,7 +57,17 @@ int main(int argc, char const *argv[])
     auto inference_fps = std::chrono::duration_cast<std::chrono::milliseconds>(dnn_end - dnn_start).count();
     std::cout << "building time: " << inference_fps / 1000 << " seconds" << std::endl;
     cv::Mat image;
-    cv::VideoCapture cap(0, cv::CAP_V4L);
+
+    // Options
+    int WIDTH = 1280;
+    int HEIGHT = 720;
+    int FPS = 60;
+
+    // Define the gstream pipeline
+    std::string pipeline = get_tegra_pipeline(WIDTH, HEIGHT, FPS);
+
+    //cv::VideoCapture cap(0, cv::CAP_V4L);
+    cv::VideoCapture cap(pipeline, cv::CAP_GSTREAMER);
 
     while (cap.isOpened())
     {
@@ -57,7 +75,7 @@ int main(int argc, char const *argv[])
         original = image.size();
         std::cout << "------------------------ inference " << std::endl;
         auto start = std::chrono::steady_clock::now();
- 
+
         image = sample.infer(image);
 
         auto end = std::chrono::steady_clock::now();
