@@ -1,0 +1,7 @@
+*.bin
+*.out
+*.cmake
+*.marks
+*.includecache
+*.internal
+*.check_cache

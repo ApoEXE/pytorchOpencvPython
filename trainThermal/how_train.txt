@@ -1,0 +1,19 @@
+download darknet
+cmd >> git clone https://github.com/AlexeyAB/darknet.git
+cmd >> cd darknet
+cmd >> make
+Download weights pretrained for offset startup
+wget https://pjreddie.com/media/files/darknet53.conv.74
+
+cp files into this data structure: "./"current directory
+./darknet
+  darknet53.conv.74
+	./data/thermal.data
+	./data/thermal.names
+	./data/themal
+	./data/thermal/*.jpg
+	./data/thermal/*.txt annotations
+	./data/train.txt
+	./cfg/yolov3-custom.cfg
+
+cmd >> ./darknet detector train data/thermal.data cfg/yolov3-custom.cfg darknet53.conv.74

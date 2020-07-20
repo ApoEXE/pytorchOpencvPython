@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/usr/bin/python3",
+    "python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"],
+    "python.jediPath": "/usr/lib/python3.6/dist-packages/cv2"
+}
