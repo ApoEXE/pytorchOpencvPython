@@ -59,8 +59,8 @@ int main(int argc, char const *argv[])
     cv::Mat image;
 
     // Options
-    int WIDTH = 1280;
-    int HEIGHT = 720;
+    int WIDTH = 300;
+    int HEIGHT = 300;
     int FPS = 60;
 
     // Define the gstream pipeline
