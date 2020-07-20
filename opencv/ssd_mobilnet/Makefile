@@ -1,4 +1,4 @@
 test: main.cpp
-	g++ -std=c++11 main.cpp  -o test - `pkg-config opencv --cflags --libs`
+	g++ -std=c++11 main.cpp  -o test `pkg-config opencv --cflags --libs`
 debug: main.cpp
-	g++ -g -std=c++11 main.cpp  -o test - `pkg-config opencv --cflags --libs`
+	g++ -g -std=c++11 main.cpp  -o test `pkg-config opencv --cflags --libs`
