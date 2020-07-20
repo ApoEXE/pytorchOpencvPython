@@ -1,11 +1,24 @@
 //g++ main.cpp dnn_opencv.cpp  -o test  `pkg-config opencv --cflags --libs`
 #include <opencv2/highgui.hpp>
 #include "dnn_opencv.h"
+
+std::string get_tegra_pipeline(int width, int height, int fps) {
+    return "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=(int)" + std::to_string(width) + ", height=(int)" +
+           std::to_string(height) + ", format=(string)NV12, framerate=(fraction)" + std::to_string(fps) +
+           "/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink";
+}
+
 int main(int argc, char const *argv[])
 {
+    // Options
+    int WIDTH = 1280;
+    int HEIGHT = 720;
+    int FPS = 60;
+    std::string pipeline = get_tegra_pipeline(WIDTH, HEIGHT, FPS);
     dnn_opencv dnn = dnn_opencv();
     dnn.load_model("MobileNetSSD_deploy.prototxt", "MobileNetSSD_deploy.caffemodel", "classes");
-    cv::VideoCapture cap = cv::VideoCapture(0, cv::CAP_V4L);
+    //cv::VideoCapture cap = cv::VideoCapture(0, cv::CAP_V4L);
+    cv::VideoCapture cap(pipeline, cv::CAP_GSTREAMER);
     cv::Mat frame;
     while (cap.isOpened())
     {
