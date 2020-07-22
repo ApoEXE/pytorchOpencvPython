@@ -2,8 +2,8 @@
 #include <opencv2/highgui.hpp>
 #include "dnn_opencv.h"
 
-std::string absPath_weights = "/home/ubuntu/jav/wsl/weights/default/";
-std::string absPath_img = "/home/ubuntu/jav/wsl/images_videos/";
+std::string absPath_weights = "/home/jav/wsl/weights/default/";
+std::string absPath_img = "/home/jav/wsl/weights/images_videos/";
 std::string classes = absPath_weights + "coco.names";
 std::string weights = absPath_weights + "yolov3-tiny.weights";
 std::string conf = absPath_weights + "yolov3-tiny.cfg";
