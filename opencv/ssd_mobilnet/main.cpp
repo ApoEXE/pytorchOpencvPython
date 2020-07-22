@@ -11,6 +11,11 @@ std::string get_tegra_pipeline(int width, int height, int fps)
 
 int main(int argc, char const *argv[])
 {
+    // Options
+    int WIDTH = 1280;
+    int HEIGHT = 720;
+    int FPS = 60;
+    std::string pipeline = get_tegra_pipeline(WIDTH, HEIGHT, FPS);
     dnn_opencv dnn = dnn_opencv();
     dnn.load_model("MobileNetSSD_deploy.prototxt", "MobileNetSSD_deploy.caffemodel", "classes");
 

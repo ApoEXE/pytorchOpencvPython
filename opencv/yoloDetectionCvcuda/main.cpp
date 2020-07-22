@@ -2,18 +2,26 @@
 #include <opencv2/highgui.hpp>
 #include "dnn_opencv.h"
 
-std::string absPath_weights = "/home/jav/wsl/weights/";
-std::string absPath_img = "/home/jav/wsl/images_videos/";
-std::string classes = absPath_weights + "default/coco.names";
-std::string weights = absPath_weights + "default/yolov3.weights";
-std::string conf = absPath_weights + "default/yolov3.cfg";
+std::string absPath_weights = "/home/ubuntu/jav/wsl/weights/default/";
+std::string absPath_img = "/home/ubuntu/jav/wsl/images_videos/";
+std::string classes = absPath_weights + "coco.names";
+std::string weights = absPath_weights + "yolov3-tiny.weights";
+std::string conf = absPath_weights + "yolov3-tiny.cfg";
 
 dnn_opencv dnn = dnn_opencv();
 int main(int argc, char const *argv[])
 {
+    printf("%s",argv[1]);
     dnn.load_model(conf, weights, classes);
-
-    cv::VideoCapture cap(0, cv::CAP_V4L);
+    cv::VideoCapture cap;
+    
+    if(argc > 1)
+        cap.open(argv[1], cv::CAP_FFMPEG);
+    else
+    {
+        cap.open(0, cv::CAP_V4L);
+    }
+    
     cv::Mat frame;
     while (cap.isOpened())
     {

@@ -21,9 +21,9 @@ import numpy as np
 # load weights and set defaults
 
 #default weights cfg
-config_path='/home/jav/wsl/weights/default/yolov3.cfg'
-weights_path='/home/jav/wsl/weights/default/yolov3.weights'
-class_path='/home/jav/wsl/weights/default/coco.names'
+config_path='/mnt/c/jav/wsl/weights/default/yolov3.cfg'
+weights_path='/mnt/c/jav/wsl/weights/default/yolov3.weights'
+class_path='/mnt/c/jav/wsl/weights/default/coco.names'
 
 #config_path='config/yolov4.cfg'
 #weights_path='config/yolov4.weights'
@@ -241,9 +241,9 @@ def getContours(img,imgContour):
     
 
 if __name__ == '__main__':
-    #videopath = str(sys.argv[1])
-    cap = cv2.VideoCapture(0,cv2.CAP_V4L)
-
+    videopath = str(sys.argv[1])
+    #cap = cv2.VideoCapture(0,cv2.CAP_V4L)
+    cap = cv2.VideoCapture(videopath,cv2.CAP_FFMPEG)
     totaltime = 0
     frames = 0
     fps = 0
