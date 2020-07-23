@@ -29,8 +29,9 @@ int main(int argc, const char **argv)
     net.setPreferableTarget(cv::dnn::DNN_TARGET_CUDA);
     cv::VideoCapture source;
 
-    source.open(2, cv::CAP_V4L);
-
+    //source.open(0, cv::CAP_V4L);
+    
+    source.open(vid);
     cv::Mat frame, cpyFrame;
 
     double tt_opencvDNN = 0;
@@ -38,7 +39,7 @@ int main(int argc, const char **argv)
 
     int frame_width = source.get(cv::CAP_PROP_FRAME_WIDTH);
     int frame_height = source.get(cv::CAP_PROP_FRAME_HEIGHT);
- 
+
     while (source.isOpened())
     {
         source >> frame;
