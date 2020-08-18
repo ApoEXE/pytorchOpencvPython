@@ -1,0 +1,15 @@
+./darknet detector demo custom/obj.data custom/yolov4-obj.cfg custom/yolo-obj_last.weights -ext_output prueba.mp4 
+
+
+from camera
+./darknet detector demo custom/obj.data custom/yolov4-obj.cfg custom/yolo-obj_last.weights -c 0
+
+
+train
+ ./darknet detector train data/obj.data yolov3-tiny-obj.cfg yolov3-tiny.conv.11
+./darknet detector train -map data/obj.data yolov3-tiny-obj.cfg yolov3-tiny.conv.11
+
+./darknet detector demo data/obj.data cfg/yolov3-tiny-obj.cfg backup/yolov3-tiny-obj_final.weights -ext_output ../jav/wsl/images_videos/video1.mp4
+
+VALIDATE
+./darknet detector map data/obj.data yolo-obj.cfg backup\yolo-obj_7000.weights
